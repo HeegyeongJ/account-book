@@ -1,9 +1,9 @@
 import logo from './logo.svg';
-import Form from './components/Form';
+import Form from './components/Form/Form';
 import './App.css';
-import ItemList from './components/ItemList';
+import ItemList from './components/Item/ItemList';
 import { useState } from 'react';
-import ItemFilter from './components/ItemFilter';
+import ItemFilter from './components/Item/ItemFilter';
 
 function App() {
   const [items, setItem] = useState([
@@ -18,15 +18,16 @@ function App() {
   const setItemHandler = (data) => {
     setItem((prevState)=> ([
       ...prevState,
-      {name: data.name,
+      {
+        name: data.name,
         cost: data.cost,
         type: data.type,
-        date: new Date(data.date),
+        date: data.date,
         memo: data.memo,
-        buyIntention: data.intention}
+        buyIntention: data.intention
+      }
     ]))
   }
-
   return (
     <div className="App">
       <h1>가계부</h1>

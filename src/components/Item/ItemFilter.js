@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ItemFilter = () => {
-    
     return (
         <div>
             <select name='typeFilter'>

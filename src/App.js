@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <h1>가계부</h1>
       <Form getItem={setItemHandler}/>
-      <ItemFilter />
+     
       <ItemList items={items} />
     </div>
   );

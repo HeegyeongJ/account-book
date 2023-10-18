@@ -4,13 +4,13 @@ const FormMemo = () => {
     const [isChecked, setIsChecked] = useState(false);
 
     const checkHandler = (e) => {
-        console.log(e.target.value)
+        setIsChecked(!isChecked)
     }
     return (
         <div>
             <label>메모 </label>
             <input type="checkbox" checked={isChecked} onChange={checkHandler}/>
-            {isChecked ? <input type='text'/> : !isChecked}
+            {isChecked ? <input type='text'/> : <p></p>}
         </div>
     );
 };

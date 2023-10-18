@@ -10,7 +10,7 @@ const FormMemo = () => {
         <div>
             <label>메모 </label>
             <input type="checkbox" checked={isChecked} onChange={checkHandler}/>
-            {isChecked ? <input type='text'/> : <p></p>}
+            {isChecked && <input type='text'/>}
         </div>
     );
 };

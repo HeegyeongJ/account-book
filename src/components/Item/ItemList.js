@@ -11,6 +11,7 @@ const ItemList = ({ items }) => {
                     key={item.name}
                     name={item.name}
                     cost={item.cost}
+                    date={item.date}
                     type={item.type}
                     memo={item.memo}
                     buyIntention={item.buyIntention}

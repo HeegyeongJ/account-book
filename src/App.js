@@ -10,7 +10,7 @@ function App() {
     {name: '우유',
     cost: 2000,
     type: '식료품',
-    date: new Date(),
+    date: new Date().toLocaleDateString("ko-KR"),
     memo: '오늘 삼',
     buyIntention: false}
   ])

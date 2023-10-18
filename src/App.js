@@ -12,7 +12,7 @@ function App() {
     type: '식료품',
     date: new Date().toLocaleDateString("ko-KR"),
     memo: '오늘 삼',
-    buyIntention: false}
+    buyIntention: 'O'}
   ])
 
   const setItemHandler = (data) => {

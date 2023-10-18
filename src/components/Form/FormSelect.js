@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 const FormSelect = ({getSelectValue}) => {
     const options = [
-        {value: 'food', name: '식료품'},
-        {value: 'clothes', name: '의류'},
-        {value: 'transportation', name: '교통비'},
-        {value: 'health', name: '건강'},
-        {value: 'entertainment', name: '여가비'}
+        {value: '식료품', name: '식료품'},
+        {value: '의류', name: '의류'},
+        {value: '교통비', name: '교통비'},
+        {value: '건강', name: '건강'},
+        {value: '여가비', name: '여가비'}
     ]
     
 

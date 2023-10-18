@@ -10,7 +10,7 @@ const Form = (props) => {
         type: '',
         date: new Date(),
         memo: '',
-        intention: false
+        intention: ''
     });
 
     const nameChange = (e) => {
@@ -71,8 +71,8 @@ const Form = (props) => {
                 <FormMemo/>
                 <div>
                     <label>재구매 의사 </label>
-                    <input onChange={intentionChange} type="radio" name='buyIntention' value="true"/>한다
-                    <input onChange={intentionChange} type="radio" name='buyIntention' value="false"/>안한다
+                    <input onChange={intentionChange} type="radio" name='buyIntention' value="O"/>한다
+                    <input onChange={intentionChange} type="radio" name='buyIntention' value="X"/>안한다
                 </div>
                 <button type='submit'>추가</button>
             </form>

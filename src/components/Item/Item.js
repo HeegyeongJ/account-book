@@ -9,7 +9,7 @@ const Item = (props) => {
             <p className='item-type'>{props.type}</p>
             <p className='item-date'>{props.date}</p>
             <p className='item-memo'>{props.memo}</p>
-            <p className='item-intention'>{props.buyIntention}</p>
+            <p className='item-intention'>재구매 : {props.buyIntention}</p>
         </div>
     );
 };

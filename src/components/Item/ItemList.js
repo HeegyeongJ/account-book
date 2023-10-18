@@ -6,9 +6,9 @@ import Item from './Item';
 const ItemList = ({ items }) => {
     return (
         <div className='list'>
-            {items && items.map((item) => {
+            {items && [...items].reverse().map((item) => {
                 return <Item
-                    key={item.name}
+                    key={item.date}
                     name={item.name}
                     cost={item.cost}
                     date={item.date}

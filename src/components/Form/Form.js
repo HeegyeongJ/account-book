@@ -4,14 +4,14 @@ import FormSelect from './FormSelect';
 import FormMemo from './FormMemo';
 
 const Form = (props) => {
-    const [object, setObject] = useState({
+    const [object, setObject] = useState([{
         name: '',
         cost: 0,
         type: '',
         date: new Date(),
         memo: '',
         intention: ''
-    });
+    }]);
 
     const nameChange = (e) => {
         setObject((prevState) => ({
@@ -50,7 +50,7 @@ const Form = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        props.getItem(object)
+        props.getItem(object);
     }
     return (
         <div>

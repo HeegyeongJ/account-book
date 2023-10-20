@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const FormSelect = ({getSelectValue}) => {
     const options = [
@@ -18,6 +18,7 @@ const FormSelect = ({getSelectValue}) => {
         <div>
             <label>유형 </label>
             <select onChange={selectHandler} value={options.name}>
+                <option>유형선택</option>
                 {options.map((option) => {
                     return <option value={option.value} key={option.value}>
                         {option.name}

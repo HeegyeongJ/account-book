@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import Form from './components/Form/Form';
 import './App.css';
 import ItemList from './components/Item/ItemList';
 import { useEffect, useState } from 'react';
+import ItemFilter from './components/Item/ItemFilter';
 
 function App() {
   const [items, setItem] = useState([
@@ -38,10 +38,16 @@ function App() {
       memo: '',
       buyIntention: 'X'
     },
-
   ])
- 
+  const [filteredItems, setFilteredItems] = useState(items)
 
+  const handleFilterChange = (filtered) => {
+    setFilteredItems(filtered);
+  }
+
+  useEffect(() => {
+    handleFilterChange(items);
+  },[items])
 
   const setItemHandler = (data) => {
     setItem((prevState) => ([
@@ -57,13 +63,15 @@ function App() {
     ]))
   }
   
+
  
   
   return (
     <div className="App">
       <h1>가계부</h1>
       <Form getItem={setItemHandler} />
-      <ItemList items={items} />
+      <ItemFilter items={items} onFilterChange={handleFilterChange} />
+      <ItemList items={filteredItems} />
     </div>
   );
 }

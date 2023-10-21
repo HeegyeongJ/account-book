@@ -6,12 +6,12 @@ const Item = (props) => {
         <ItemBox>
             <P>{props.date}</P>
             <div>
-                <P className='item-type'>유형: {props.type}</P>
+                <P>유형: {props.type}</P>
                 <P>이름: {props.name}</P>
-                <P className='item-cost'>가격: {props.cost}</P>
+                <P>가격: {props.cost}</P>
             </div>
             <Memo>{props.memo}</Memo>
-            <p className='item-intention'>재구매 : {props.buyIntention}</p>
+            <p>재구매 : {props.buyIntention}</p>
         </ItemBox>
     );
 };
